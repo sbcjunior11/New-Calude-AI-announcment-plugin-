@@ -1,0 +1,18 @@
+name: Announcer
+version: ${project.version}
+main: dev.announcer.AnnouncerPlugin
+api-version: "1.20"
+description: CoconutMC announcements (chat, titles, events, darkness).
+commands:
+  announce:
+    description: Broadcast an announcement to everyone (chat + title)
+    usage: /announce <message|sword|mace|spear|crystal|darkness|keyall>
+    aliases: [ann, broadcast, announcement, announcment]
+    permission: announcer.use
+permissions:
+  announcer.use:
+    description: Allows /announce
+    default: op
+  announcer.reload:
+    description: Allows /announce reload
+    default: op

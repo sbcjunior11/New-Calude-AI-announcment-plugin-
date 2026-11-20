@@ -1,0 +1,84 @@
+# CoconutMC Announcer
+# Use & color codes (e.g. &6 = gold, &a = green, &l = bold)
+
+# Normal /announce <message>
+chat:
+  prefix: "&8[&6&l✿ &a&lCoconut&e&lMC &6&l✿&8] &f"
+  blank-lines-around: true
+
+title:
+  enabled: true
+  main: "&6&l✿ &a&lCoconut&e&lMC &6&l✿"
+  fade-in: 10
+  stay: 80
+  fade-out: 20
+
+sound:
+  enabled: true
+  name: "entity.player.levelup"
+  volume: 1.0
+  pitch: 1.0
+
+# /announce keyall
+keyall:
+  text: "Are we ready for a keyall?"
+  subtitle: "&7Get ready..."
+
+# /announce ......  (or /announce surprise)
+surprise:
+  text: "SURPRISE!"
+  subtitle: "&aEnjoy the show!"
+  chat: "&6&l✿ &a&lSURPRISE! &6&l✿"
+
+# /announce darkness [message]
+# Screen goes black for everyone and only the announcement shows.
+darkness:
+  duration: 8                # seconds
+  freeze-movement: true      # stops players walking around blind (safer: no lava/falls)
+  default-message: "&f&lThe lights have gone out..."
+  subtitle: "&7&oThe coconut grove falls silent..."
+  end-message: "&e&lThe lights return..."
+
+# /announce sword | mace | spear | crystal
+events:
+  sword:
+    name: "SWORD EVENT"
+    symbol: "⚔"
+    subtitle: "&eGrab your blade and head to spawn!"
+    sound: "entity.player.attack.sweep"
+    lines:
+      - "&6&l⚔ &eThe &a&lSword Event &eis starting now!"
+      - "&7Grab your &fsword &7and meet at &aspawn&7."
+      - "&7Last one standing wins a &6coconut prize&7!"
+  mace:
+    name: "MACE EVENT"
+    symbol: "☄"
+    subtitle: "&eSmash your way to victory!"
+    sound: "entity.iron_golem.attack"
+    lines:
+      - "&6&l☄ &eThe &a&lMace Event &eis starting now!"
+      - "&7Grab your &fmace &7and meet at &aspawn&7."
+      - "&7Smash the competition to win a &6coconut prize&7!"
+  spear:
+    name: "SPEAR EVENT"
+    symbol: "➳"
+    subtitle: "&eAim true and strike first!"
+    sound: "item.trident.throw"
+    lines:
+      - "&6&l➳ &eThe &a&lSpear Event &eis starting now!"
+      - "&7Grab your &fspear &7and meet at &aspawn&7."
+      - "&7Strike first to win a &6coconut prize&7!"
+  crystal:
+    name: "CRYSTAL EVENT"
+    symbol: "❖"
+    subtitle: "&eBlow up the competition!"
+    sound: "block.amethyst_block.chime"
+    lines:
+      - "&6&l❖ &eThe &a&lCrystal Event &eis starting now!"
+      - "&7Grab your &fcrystals &7and meet at &aspawn&7."
+      - "&7Outlast everyone to win a &6coconut prize&7!"
+
+messages:
+  usage: "&cUsage: /announce <message|sword|mace|spear|crystal|darkness|keyall>"
+  no-permission: "&cYou don't have permission to do that."
+  reloaded: "&aAnnouncer config reloaded."
